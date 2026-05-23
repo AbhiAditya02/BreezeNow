@@ -462,7 +462,7 @@ const loadFavoriteCity = (cityName) => {
               {cityName} weather at a glance
             </h2>
           </div>
-          <button onClick={toggleUnit} className="unit-switch">
+          <button onClick={toggleUnit} className="unit-switch" >
             Switch to {isCelsius ? "°F" : "°C"}
           </button>
         </div>
@@ -582,7 +582,7 @@ const loadFavoriteCity = (cityName) => {
         )}
 
         {forecastData && forecastData.length > 0 && (
-          <section className="section-block compact weather-metrics-grid">
+          <section className="section-block compact weather-metrics-grid" id="forecast">
             <div className="section-heading align-start">
               <p className="section-kicker">Forecast</p>
               <h2>3-day outlook</h2>
@@ -761,7 +761,7 @@ const loadFavoriteCity = (cityName) => {
           </div>
         </Hero>
 
-        <section className="section-block" id="weather">
+        <section className="section-block">
           <div className="section-heading">
             <p className="section-kicker">Why it feels premium</p>
             <h2>Focused weather cards instead of a cluttered dashboard.</h2>
@@ -795,7 +795,7 @@ const loadFavoriteCity = (cityName) => {
           </FeaturesGrid>
         </section>
 
-        <section className="section-block compact">
+        <section className="section-block compact" id="weather">
           <div className="section-heading align-start">
             <p className="section-kicker">Search</p>
             <h2>Check a location in one line.</h2>
@@ -963,7 +963,7 @@ const loadFavoriteCity = (cityName) => {
 
         {error ? (
           <div className="weather-alert">{error}</div>
-        ) : (
+        ) : (   
           <WeatherDetail />
         )}
       </div>
